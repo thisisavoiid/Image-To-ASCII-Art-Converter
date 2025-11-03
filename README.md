@@ -10,7 +10,6 @@ A **Python GUI tool** that converts images into ASCII art. Users can select an i
 - [Usage](#usage)
 - [Installation](#installation)
 - [Mechanics & Design](#mechanics--design)
-- [Future Improvements](#future-improvements)
 - [Author](#author)
 
 ---
@@ -91,16 +90,6 @@ python main.py
 
 ---
 
-## Future Improvements
-
-* Add support for **color ASCII art**.
-* Allow batch conversion of multiple images.
-* Implement custom shading character sets.
-* Add drag-and-drop image support.
-* Save output to custom directories with filenames.
-
----
-
 ## Author
 
 **Jonathan Huber** – Developed as part of a Python GUI project for creative image manipulation.
@@ -108,5 +97,3 @@ python main.py
 ---
 
 > Made with ❤️ in Python
-Do you want me to do that?
-```
