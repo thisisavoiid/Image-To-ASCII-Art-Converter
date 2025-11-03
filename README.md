@@ -1,55 +1,112 @@
-Image to ASCII Art Converter
+# Image to ASCII Art
 
-A Python GUI tool that converts images into ASCII art using a pixelation-based brightness mapping. Built with `customtkinter` for an interactive interface.
+A **Python GUI tool** that converts images into ASCII art. Users can select an image file, adjust the quality, and generate a text-based ASCII representation of the image directly on their Desktop. The application uses **CustomTkinter** for a modern interface and **Pillow** for image processing.
+
+---
+
+## Table of Contents
+
+- [Features](#features)
+- [Usage](#usage)
+- [Installation](#installation)
+- [Mechanics & Design](#mechanics--design)
+- [Future Improvements](#future-improvements)
+- [Author](#author)
 
 ---
 
 ## Features
 
-- Select any image file from your computer
-- Adjustable quality/pixelation via slider (10–80)
-- Converts image to ASCII characters based on brightness
-- Supports shading levels: ░ ▒ ▓ █
-- Saves output as `output.txt` on desktop
-- Automatically opens ASCII output after conversion
-- Lightweight, responsive GUI
+- **Select image files** via an intuitive GUI.
+- Adjust **conversion quality** using a slider.
+- Convert images to ASCII art with shading for depth.
+- Output automatically saved to Desktop as `output.txt`.
+- **Immediate viewing**: Opens the generated file automatically.
+- Lightweight and easy to extend with custom shading or effects.
 
 ---
 
-## How to Use
+## Usage
 
 1. Run the program:
 ```bash
-python <script_name>.py
+python main.py
 ````
 
-2. Adjust the **Quality** slider to control ASCII resolution.
+2. Use the slider to select the desired **quality** (higher numbers = lower resolution ASCII).
 3. Click **Select File** to open an image.
-4. The program generates ASCII art and saves it as `output.txt` on your desktop.
-5. The output file opens automatically for viewing.
+4. The program generates an ASCII version of the image and opens `output.txt` on your Desktop.
+
+> Darker areas are represented with dense characters (`█`, `▓`) and lighter areas with lighter characters (`░`, `▒`) for a visual gradient effect.
 
 ---
 
-## Requirements
+## Installation
 
-* Python 3.x
-* Packages:
+1. Clone the repository:
 
-  * `customtkinter`
-  * `Pillow` (`PIL`)
-* Optional: `os`, `shutil`, `time`, `threading` (standard library)
+```bash
+git clone https://github.com/thisisavoiid/Image-To-ASCII-Art-Converter.git
+```
 
-Install dependencies with:
+2. Navigate into the project folder:
+
+```bash
+cd Image-To-ASCII-Art-Converter
+```
+
+3. Install dependencies:
 
 ```bash
 pip install customtkinter pillow
 ```
 
+4. Run the program:
+
+```bash
+python main.py
+```
+
 ---
 
-## Notes
+## Mechanics & Design
 
-* Higher quality values produce smaller ASCII representations (more pixelated).
-* Shading is determined by brightness averaging of RGB values.
-* Only RGB images are supported; other modes are converted automatically.
-* Output file is overwritten on each conversion.
+* **Image Processing**:
+
+  * Opens the selected image using **Pillow**.
+  * Converts image to **RGB** and rescales based on the quality slider.
+  * Calculates **brightness per pixel** and maps it to ASCII characters.
+* **ASCII Mapping**:
+
+  * Brightness levels mapped to characters: `░`, `▒`, `▓`, `█`.
+  * Creates a visually coherent representation of the original image.
+* **GUI System**:
+
+  * Built with **CustomTkinter** for a modern look.
+  * Slider for quality, button for file selection, and label showing current value.
+* **Output**:
+
+  * Writes ASCII art to `output.txt` on Desktop.
+  * Automatically opens the text file for user convenience.
+
+---
+
+## Future Improvements
+
+* Add support for **color ASCII art**.
+* Allow batch conversion of multiple images.
+* Implement custom shading character sets.
+* Add drag-and-drop image support.
+* Save output to custom directories with filenames.
+
+---
+
+## Author
+
+**Jonathan Huber** – Developed as part of a Python GUI project for creative image manipulation.
+
+---
+
+> Made with ❤️ in Python
+Do you want me to do that?
+```
